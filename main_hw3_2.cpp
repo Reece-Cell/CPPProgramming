@@ -22,7 +22,7 @@ using namespace std;
 int count(int time, int arr[], int sched){
     int count = 0;
     for(int i = 0; i < sched; i += 2){
-        if(time > arr[i] && time < arr[i+1]){
+        if(time >= arr[i] && time <= arr[i+1]){
             count++;
         }
     }
@@ -44,6 +44,6 @@ int main()
             maxev = count(i,arr,sched);
         }
     }
-    cout << "Max events: " << maxev+1 << "\n";
+    cout << "Max events: " << maxev << "\n";
 }
 
